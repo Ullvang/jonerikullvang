@@ -21,7 +21,8 @@ const config = {
 			fallback: undefined,
 			precompress: true,
 			strict: true
-		})
+		}),
+		inlineStyleThreshold: 1024 * 5 // 5kb
 	}
 };
 
