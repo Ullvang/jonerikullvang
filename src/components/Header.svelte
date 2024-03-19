@@ -1,20 +1,27 @@
-<header>
+<header id="top">
 	<div>
-		<h2>DESIGN, UTVIKLING OG DIGITAL MARKETSFØRING</h2>
-		<h1>JON ERIK ULLVANG</h1>
+		<p class="green-linear-gradient font-semibold">DESIGN, UTVIKLING OG DIGITAL MARKETSFØRING</p>
+		<h1 class="mb-0">JON ERIK ULLVANG</h1>
 	</div>
-	<nav>
+	<nav class="hidden lg:flex justify-between items-center gap-14">
 		<a href="#tjenester">TJENESTER</a>
-		<a href="#prosjekter">PROSJEKTER</a>
+		<!-- <a href="#prosjekter">PROSJEKTER</a>
+		 -->
 		<a href="#erfaring">ERFARING</a>
 		<a href="#kontakt">KONTAKT</a>
 	</nav>
 </header>
 
 <style>
-	header {
+	h1 {
+		line-height: 2rem;
+	}
+	p {
+		padding: 0 !important;
+	}
+	/* header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-	}
+	} */
 </style>

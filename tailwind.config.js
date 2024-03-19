@@ -8,7 +8,8 @@ export default {
 				'brand-light-dark': '#242424',
 				'brand-light-green': '#ADFFDA',
 				'brand-green': '#4CE19E',
-				'brand-dark-green': '#318E64'
+				'brand-dark-green': '#318E64',
+				'brand-neon-green': '#53E14C'
 			}
 		}
 	},

@@ -2,23 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+	.green-linear-gradient {
+		background: linear-gradient(to bottom right, var(--brand-green), var(--brand-neon-green));
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: var(--brand-green);
+	}
+}
+
 @layer base {
+	:root {
+		--brand-dark: #151515;
+		--brand-light-dark: #242424;
+		--brand-light-green: #adffda;
+		--brand-green: #4ce19e;
+		--brand-dark-green: #318e64;
+		--brand-neon-green: #53e14c;
+	}
+	html {
+		@apply scroll-smooth;
+	}
 	body {
-		@apply bg-brand-dark;
+		@apply bg-brand-dark grid;
+	}
+	header {
+		@apply py-8 md:py-16 flex justify-between;
+	}
+	header,
+	main {
+		@apply container justify-self-center px-10;
+	}
+	section {
+		@apply py-8 md:py-24;
 	}
 	h1 {
-		@apply text-[40px] leading-8 text-white;
+		@apply text-2xl sm:text-4xl mb-8 lg:mb-12 font-bold;
 	}
 	h2 {
-		@apply text-3xl text-brand-light-green;
+		@apply text-xl sm:text-3xl;
+	}
+	p,
+	a,
+	button,
+	label,
+	input,
+	textarea {
+		@apply text-base sm:text-lg;
+	}
+	label {
+		@apply text-center sm:text-left;
 	}
 	p {
+		@apply py-14;
+	}
+	h1,
+	h2,
+	p,
+	a,
+	button,
+	li,
+	label {
 		@apply text-white;
 	}
-	a {
-		@apply text-white;
-	}
-	button {
-		@apply text-white;
+	a:hover {
+		@apply underline underline-offset-4;
 	}
 }
