@@ -22,7 +22,7 @@ const config = {
 			precompress: true,
 			strict: true
 		}),
-		inlineStyleThreshold: 1024 * 5 // 5kb
+		inlineStyleThreshold: 1024 * 10 // 10kb
 	}
 };
 
