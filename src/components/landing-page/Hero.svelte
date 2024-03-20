@@ -1,5 +1,6 @@
 <script>
 	import profile from '$lib/images/profil.webp';
+	import profileSmall from '$lib/images/profil-small.webp';
 </script>
 
 <section class="flex flex-col lg:flex-row gap-20 2xl:gap-80">
@@ -20,14 +21,25 @@
 		</button>
 	</div>
 	<div id="borderImage">
-		<img
-			alt="jon erik ullvang"
-			width="488"
-			height="488"
-			src={profile}
-			class="max-w-none"
-			style="border-radius: 50%;"
-		/>
+		<picture>
+			<source
+				media="(min-width:700px)"
+				width="488"
+				height="488"
+				srcset={profile}
+				class="max-w-none"
+				style="border-radius: 50%;"
+			/>
+			<img
+				alt="jon erik ullvang"
+				width="250"
+				height="250"
+				src={profileSmall}
+				class="max-w-none"
+				style="border-radius: 50%;"
+				loading="lazy"
+			/>
+		</picture>
 	</div>
 </section>
 
