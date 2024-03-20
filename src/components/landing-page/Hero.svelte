@@ -1,24 +1,42 @@
 <script>
 	import profile from '$lib/images/profil.webp';
 	import profileSmall from '$lib/images/profil-small.webp';
+
+	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
+
+	let ready = false;
+	onMount(() => (ready = true));
 </script>
 
 <section class="flex flex-col lg:flex-row gap-20 2xl:gap-80">
 	<div class="grid">
-		<h1 class="m-0 text-center sm:text-left">
-			Design og utvikling av nettsider, nettbutikk og mobilapper
-		</h1>
-		<p class="pt-5 pb-10 sm:pb-20 text-center sm:text-left">
-			Jeg heter Jon Erik Ullvang og er en systemutvikler med snart 5 års erfaring. Til vanlig jobber
-			jeg som systemutvikler hos RamBase, men driver med frilans oppdrag på fritiden. Min store
-			lidenskap er systemutvikling og jeg hjelper privatpersoner og små bedrifter med design,
-			utvikling og digital marketsføring av applikasjoner for alle digitale flater.
-		</p>
-		<button class="justify-self-center sm:justify-self-start">
-			<a href="#kontakt" class="hover:no-underline"
-				>Kontakt meg <span class="hidden sm:inline">for en uforpliktende prat</span></a
+		{#if ready}
+			<div
+				transition:fly={{
+					delay: 10,
+					duration: 800,
+					y: 30,
+					opacity: 0
+					// easing: quintOut
+				}}
 			>
-		</button>
+				<h1 class="m-0 text-center sm:text-left">
+					Design og utvikling av nettsider, nettbutikk og mobilapper
+				</h1>
+				<p class="pt-5 pb-10 sm:pb-20 text-center sm:text-left">
+					Jeg heter Jon Erik Ullvang og er en systemutvikler med snart 5 års erfaring. Til vanlig
+					jobber jeg som systemutvikler hos RamBase, men driver med frilans oppdrag på fritiden. Min
+					store lidenskap er systemutvikling og jeg hjelper privatpersoner og små bedrifter med
+					design, utvikling og digital marketsføring av applikasjoner for alle digitale flater.
+				</p>
+				<button class="justify-self-center sm:justify-self-start">
+					<a href="#kontakt" class="hover:no-underline"
+						>Kontakt meg <span class="hidden sm:inline">for en uforpliktende prat</span></a
+					>
+				</button>
+			</div>
+		{/if}
 	</div>
 	<div id="borderImage">
 		<picture>
