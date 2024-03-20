@@ -37,7 +37,6 @@
 				src={profileSmall}
 				class="max-w-none"
 				style="border-radius: 50%;"
-				loading="lazy"
 			/>
 		</picture>
 	</div>
